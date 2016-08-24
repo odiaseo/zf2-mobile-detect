@@ -36,14 +36,6 @@ class SampleControllerTest extends \Zend\Test\PHPUnit\Controller\AbstractHttpCon
 		$this->assertTrue($oMobileDetect->isAndroidOS());
 	}
 
-	/**
-	 * @expectedException LogicException
-	 */
-	public function testMobileDetectViewHelperWithServiceLocatorUndefined(){
-		$oMobileDetect = new \Neilime\MobileDetect\View\Helper\MobileDetectHelper();
-		$oMobileDetect->__invoke();
-	}
-
 	public function testMobileDetectViewHelper(){
 		$this->assertInstanceOf('\Neilime\MobileDetect\View\Helper\MobileDetectHelper',$oMobileDetectHelper = $this->getApplicationServiceLocator()->get('ViewHelperManager')->get('MobileDetect'));
 		$this->assertInstanceOf('\Mobile_Detect',$oMobileDetectHelper->__invoke());
