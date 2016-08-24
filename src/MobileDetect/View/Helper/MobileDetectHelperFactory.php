@@ -8,6 +8,6 @@ class MobileDetectHelperFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $serviceLocator, $requestedName, array $options = null)
     {
-        return new MobileDetectHelper($serviceLocator->get('MobileDetect'));
+        return new MobileDetectHelper($serviceLocator->get('mobileDetect'));
     }
 }
