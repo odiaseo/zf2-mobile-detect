@@ -2,7 +2,7 @@
 namespace Neilime\MobileDetect\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FActory\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * Class MobileDetectFactory
